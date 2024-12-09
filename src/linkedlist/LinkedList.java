@@ -1,4 +1,5 @@
 package linkedlist;
+
 public class LinkedList {
     private Node head;
     private Node tail;
@@ -14,6 +15,25 @@ public class LinkedList {
         }
     }
 
+    public Node getHead(){
+        return head;
+    }
+
+    public Node getTail(){
+        return tail;
+    }
+
+    public Node getLength(){
+        return tail;
+    }
+
+    public void printList(){
+        Node temp = head;
+        while (temp!=null){
+            System.out.println(temp.value);
+            temp = temp.next;
+        }
+    }
 
     // Constructor
     public LinkedList(int value){
@@ -22,6 +42,7 @@ public class LinkedList {
         tail = newNode;
         length = 1;
     }    
+
 
 
     public void append(int value){
@@ -42,6 +63,38 @@ public class LinkedList {
             length = length + 1;
         }
 
+    }
+
+
+    public Node removeLast(){
+        if (length==0){
+            head = null;
+            tail = null;
+        }
+        
+        Node currentNode = head;
+        Node lastNode = head;
+
+        if (length == 1){
+            head = null;
+            tail = null;
+            length = length -1;
+        } else {
+            while (currentNode.next!=null){
+                currentNode = currentNode.next;
+    
+                if (currentNode.next==null){
+                    tail = lastNode;
+                    tail.next = null;
+                    length = length-1;
+                    break;
+                } else{
+                    lastNode = currentNode;
+                }
+            }
+        }
+
+        return currentNode;
     }
     
 }
