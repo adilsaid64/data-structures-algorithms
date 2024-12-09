@@ -53,6 +53,12 @@ public class LinkedList {
         }
     }
 
+    public void makeEmpty(){
+        head = null;
+        tail = null;
+        length = 0;
+    }
+
     // Constructor
     public LinkedList(int value){
         Node newNode = new Node(value); // new keyword runs the constructure for creating a new node
