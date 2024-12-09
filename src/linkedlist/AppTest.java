@@ -1,6 +1,8 @@
 package linkedlist;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
 import org.junit.Test;
 
 public class AppTest {
@@ -34,6 +36,6 @@ public class AppTest {
         
         assertEquals(2, myLinkedList.removeLast().value);
         assertEquals(1, myLinkedList.removeLast().value);
-        assertEquals(null, myLinkedList.removeLast());
+        assertNull(myLinkedList.removeLast());
     }
 }
