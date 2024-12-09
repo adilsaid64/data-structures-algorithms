@@ -13,9 +13,7 @@ public class AppTest {
         assertEquals(4, myLinkedList.getHead().value);
         assertEquals(4, myLinkedList.getTail().value);
         assertEquals(1, myLinkedList.getLength());
-        
     }
-
 
     @Test
     public void testAppend(){
