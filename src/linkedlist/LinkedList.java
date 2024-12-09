@@ -118,6 +118,17 @@ public class LinkedList {
 
         return currentNode;
     }
+
+    public void prepend(int value){
+//        Create the new node
+         Node newNode = new Node(value);
+//         the new node points to the head
+         newNode.next = head;
+//         the head becomes the new node
+         head = newNode;
+//         increase the length
+        length = length += 1;
+    }
     
 }
 

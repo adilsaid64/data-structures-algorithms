@@ -1,9 +1,8 @@
 package linkedlist;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class AppTest {
 
@@ -35,5 +34,17 @@ public class AppTest {
         assertEquals(2, myLinkedList.removeLast().value);
         assertEquals(1, myLinkedList.removeLast().value);
         assertNull(myLinkedList.removeLast());
+    }
+
+    @Test
+    public void testPrepend(){
+        LinkedList myLinkedList = new LinkedList(2);
+
+        myLinkedList.prepend(1);
+
+        assertEquals(1, myLinkedList.getHead().value);
+        assertEquals(2, myLinkedList.getTail().value);
+        assertEquals(2, myLinkedList.getLength());
+
     }
 }
