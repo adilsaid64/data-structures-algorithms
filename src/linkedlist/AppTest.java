@@ -12,9 +12,9 @@ public class AppTest {
         myLinkedList.append(1);
         myLinkedList.append(2);
 
-         assertEquals(1, myLinkedList.getHead().value);
-         assertEquals(2, myLinkedList.getTail().value);
-         assertEquals(2, myLinkedList.getLength());
+        assertEquals(1, myLinkedList.getHead().value);
+        assertEquals(2, myLinkedList.getTail().value);
+        assertEquals(2, myLinkedList.getLength());
     }
 
     @Test
