@@ -6,6 +6,16 @@ import org.junit.Test;
 public class AppTest {
 
     @Test
+    public void testConstructor(){
+        LinkedList myLinkedList = new LinkedList(4);
+        assertEquals(4, myLinkedList.getHead().value);
+        assertEquals(4, myLinkedList.getTail().value);
+        assertEquals(1, myLinkedList.getLength());
+        
+    }
+
+
+    @Test
     public void testAppend(){
         LinkedList myLinkedList = new LinkedList(1);
         myLinkedList.makeEmpty();
