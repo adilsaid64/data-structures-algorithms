@@ -3,7 +3,7 @@ package linkedlist;
 public class LinkedList {
     private Node head;
     private Node tail;
-    private  int length;
+    private int length;
 
     // The node class is an inner class for the LinkedList
     class Node{
@@ -23,8 +23,8 @@ public class LinkedList {
         return tail;
     }
 
-    public Node getLength(){
-        return tail;
+    public int getLength(){
+        return length;
     }
 
     public void printList(){
