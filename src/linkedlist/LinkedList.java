@@ -67,8 +67,6 @@ public class LinkedList {
         length = 1;
     }    
 
-
-
     public void append(int value){
         if (length < 1){
             Node newNode = new Node(value); 
@@ -89,11 +87,11 @@ public class LinkedList {
 
     }
 
-
     public Node removeLast(){
         if (length==0){
             head = null;
             tail = null;
+            return null;
         }
         
         Node currentNode = head;
