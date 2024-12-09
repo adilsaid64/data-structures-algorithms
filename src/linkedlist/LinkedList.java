@@ -35,6 +35,24 @@ public class LinkedList {
         }
     }
 
+    public void printAll(){
+        if (length==0){
+            System.out.println("Head: null");
+            System.out.println("Tail: null");
+        } else {
+            System.out.println("Head: " + head.value);
+            System.out.println("Tail: " + tail.value);
+        }
+
+        System.out.println("Length:" + length);
+        System.out.println("\nLinked List:");
+        if (length == 0) {
+            System.out.println("empty");
+        } else {
+            printList();
+        }
+    }
+
     // Constructor
     public LinkedList(int value){
         Node newNode = new Node(value); // new keyword runs the constructure for creating a new node
