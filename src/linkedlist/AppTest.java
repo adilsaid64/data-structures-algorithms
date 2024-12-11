@@ -47,4 +47,15 @@ public class AppTest {
         assertEquals(2, myLinkedList.getLength());
 
     }
+
+    @Test
+    public void testRemoveFirst(){
+        LinkedList myLinkedList = new LinkedList(2);
+        myLinkedList.append(1);
+
+        assertEquals(2, myLinkedList.removeFirst().value);
+        assertEquals(1, myLinkedList.removeFirst().value);
+        assertNull(myLinkedList.removeFirst());
+
+    }
 }

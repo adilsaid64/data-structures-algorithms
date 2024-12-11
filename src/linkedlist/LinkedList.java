@@ -129,6 +129,10 @@ public class LinkedList {
 //         increase the length
         length = length += 1;
     }
+
+    public Node removeFirst(){
+//  Logic for removing first node
+    }
     
 }
 
