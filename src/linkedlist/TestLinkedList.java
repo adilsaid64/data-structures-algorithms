@@ -71,4 +71,15 @@ public class TestLinkedList {
         assertEquals(1, myLinkedList.get(1).value);
         assertEquals(0, myLinkedList.get(0).value);
     }
+
+    @Test
+    public void testSet(){
+        LinkedList myLinkedList = new LinkedList(0);
+        myLinkedList.append(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+
+        myLinkedList.set(2, 99);
+        assertEquals(99, myLinkedList.get(2).value);
+    }
 }

@@ -165,6 +165,27 @@ public class LinkedList {
         }
         return temp;
     }
+
+    public boolean set(int index, int value){
+        if (index<0 || index > length) {
+            return false;
+        }
+        int count = 0;
+        Node temp = head;
+        while (count != index) {
+            temp = temp.next;
+            count = count + 1;
+        }
+
+        System.out.println("BEFORE");
+        printList();
+
+        temp.value = value;
+        System.out.println("AFTER");
+
+        printList();
+        return true;
+    }
 }
 
 
