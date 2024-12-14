@@ -132,6 +132,7 @@ public class LinkedList {
 
     public Node removeFirst(){
 //  Logic for removing first node
+        return new Node(3);
     }
     
 }
