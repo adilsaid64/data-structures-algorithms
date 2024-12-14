@@ -82,4 +82,27 @@ public class TestLinkedList {
         myLinkedList.set(2, 99);
         assertEquals(99, myLinkedList.get(2).value);
     }
+
+    @Test
+    public void testInsert(){
+        LinkedList myLinkedList = new LinkedList(1);
+        myLinkedList.append(3);
+
+        System.out.println("LL before insert():");
+        myLinkedList.insert(1, 2);
+        System.out.println("\nLL after insert(2) in middle:");
+        myLinkedList.printList();
+        assertEquals(2, myLinkedList.get(1).value);
+
+        myLinkedList.insert(0, 0);
+        System.out.println("\nLL after insert(0) at beginning:");
+        myLinkedList.printList();
+        assertEquals(0, myLinkedList.get(0).value);
+
+        myLinkedList.insert(4, 4);
+        System.out.println("\nLL after insert(4) at end:");
+        myLinkedList.printList();
+        assertEquals(4, myLinkedList.get(4).value);
+
+    }
 }

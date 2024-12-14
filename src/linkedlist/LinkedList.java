@@ -152,7 +152,6 @@ public class LinkedList {
         return temp;
     }
 
-
     public Node get(int index) {
         if (index<0 || index > length) {
             return null;
@@ -176,14 +175,37 @@ public class LinkedList {
             temp = temp.next;
             count = count + 1;
         }
-
-        System.out.println("BEFORE");
-        printList();
-
         temp.value = value;
-        System.out.println("AFTER");
+        return true;
+    }
 
-        printList();
+    public boolean insert(int index, int value){
+        Node newNode = new Node(value);
+
+        if (index == 0){
+            prepend(value);
+            return true;
+        }
+
+        if (index == length){
+            append(value);
+            return true;
+        }
+
+        if (index<0 || index > length) {
+            return false;
+        }
+
+        int count = 0;
+        Node temp = head;
+        while (count != index-1) {
+            temp = temp.next;
+            count = count + 1;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+        length += 1;
+
         return true;
     }
 }
