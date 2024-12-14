@@ -151,7 +151,20 @@ public class LinkedList {
         length = length -1;
         return temp;
     }
-    
+
+
+    public Node get(int index) {
+        if (index<0 || index > length) {
+            return null;
+        }
+        int count = 0;
+        Node temp = head;
+        while (count != index) {
+            temp = temp.next;
+            count = count + 1;
+        }
+        return temp;
+    }
 }
 
 

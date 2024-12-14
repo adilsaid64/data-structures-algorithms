@@ -67,5 +67,8 @@ public class TestLinkedList {
         myLinkedList.append(3);
 
         assertEquals(3, myLinkedList.get(3).value);
+        assertEquals(2, myLinkedList.get(2).value);
+        assertEquals(1, myLinkedList.get(1).value);
+        assertEquals(0, myLinkedList.get(0).value);
     }
 }
