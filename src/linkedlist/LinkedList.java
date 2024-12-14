@@ -169,12 +169,7 @@ public class LinkedList {
         if (index<0 || index > length) {
             return false;
         }
-        int count = 0;
-        Node temp = head;
-        while (count != index) {
-            temp = temp.next;
-            count = count + 1;
-        }
+        Node temp = get(index);
         temp.value = value;
         return true;
     }
