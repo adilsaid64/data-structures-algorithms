@@ -196,12 +196,8 @@ public class LinkedList {
             return false;
         }
 
-        int count = 0;
-        Node temp = head;
-        while (count != index-1) {
-            temp = temp.next;
-            count = count + 1;
-        }
+        Node temp = get(index-1);
+
         newNode.next = temp.next;
         temp.next = newNode;
         length += 1;
