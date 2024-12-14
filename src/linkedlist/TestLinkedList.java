@@ -58,4 +58,14 @@ public class TestLinkedList {
         assertEquals(0, myLinkedList.getLength());
         assertNull(myLinkedList.removeFirst());
     }
+
+    @Test
+    public void testGet(){
+        LinkedList myLinkedList = new LinkedList(0);
+        myLinkedList.append(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+
+        assertEquals(3, myLinkedList.get(3).value);
+    }
 }
