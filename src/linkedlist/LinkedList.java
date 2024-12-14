@@ -127,12 +127,29 @@ public class LinkedList {
 //         the head becomes the new node
          head = newNode;
 //         increase the length
-        length = length += 1;
+        length = length + 1;
     }
 
     public Node removeFirst(){
 //  Logic for removing first node
-        return new Node(3);
+        Node temp = head;
+
+//       Edge case for when the head is already null.
+        if (head == null){
+            return null;
+        }
+//        If current head.next is null. ie there is only one element in the linkedList.
+        if (head.next == null){
+            head = null;
+            tail = null;
+            length = 0;
+            return temp;
+        }
+
+//        Otherwise set the new head to the next value, and decrease the length by 1.
+        head = head.next;
+        length = length -1;
+        return temp;
     }
     
 }

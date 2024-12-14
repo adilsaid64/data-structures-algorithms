@@ -52,10 +52,10 @@ public class TestLinkedList {
     public void testRemoveFirst(){
         LinkedList myLinkedList = new LinkedList(2);
         myLinkedList.append(1);
-
         assertEquals(2, myLinkedList.removeFirst().value);
+        assertEquals(1, myLinkedList.getLength());
         assertEquals(1, myLinkedList.removeFirst().value);
+        assertEquals(0, myLinkedList.getLength());
         assertNull(myLinkedList.removeFirst());
-
     }
 }
