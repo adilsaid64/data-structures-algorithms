@@ -105,4 +105,28 @@ public class TestLinkedList {
         assertEquals(4, myLinkedList.get(4).value);
 
     }
+
+    @Test
+    public void testRemove(){
+        LinkedList myLinkedList = new LinkedList(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+        myLinkedList.append(4);
+        myLinkedList.append(5);
+
+        System.out.println("\nRemoved node from middle:");
+//        Check we removed the correct node
+        assertEquals(3, myLinkedList.remove(2).value);
+//        Check the new index is correct
+        assertEquals(4, myLinkedList.get(2).value);
+
+        System.out.println("\nRemoved node from start:");
+//        Check we removed the correct starting node.
+        assertEquals(1, myLinkedList.remove(0).value);
+        assertEquals(2, myLinkedList.getHead().value);
+
+        System.out.println("\nRemoved node from end:");
+        assertEquals(5, myLinkedList.remove(2).value);
+        assertEquals(4, myLinkedList.getTail().value);
+    }
 }

@@ -199,6 +199,30 @@ public class LinkedList {
 
         return true;
     }
+
+    public Node remove(int index){
+
+        if (index == 0){
+            return removeFirst();
+        }
+
+        if (index == length-1){
+            return removeLast();
+        }
+
+        if (index<0 || index > length) {
+            return null;
+        }
+
+        Node temp = get(index-1); // remove temp.next
+
+        Node nodeToRemove = temp.next;
+        temp.next = nodeToRemove.next;
+        nodeToRemove.next = null;
+        length = length - 1;
+
+        return nodeToRemove;
+    }
 }
 
 
