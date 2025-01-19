@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.time.temporal.Temporal;
+
 public class LinkedList {
     private Node head;
     private Node tail;
@@ -223,6 +225,29 @@ public class LinkedList {
 
         return nodeToRemove;
     }
+
+
+    public void reverse(){
+        Node prev = null;
+        Node current = head;
+        Node next;
+        while (current!=null){
+//            Store the next value
+            next = current.next;
+
+//            Change the pointer of the current to the prev. Reverse the order of the current pointer
+            current.next = prev;
+
+//            Change the current to be the prev
+            prev = current;
+            current = next;
+        }
+
+        tail = head;
+        head = prev;
+
+    }
+
 }
 
 

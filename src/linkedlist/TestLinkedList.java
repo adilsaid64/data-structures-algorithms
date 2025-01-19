@@ -129,4 +129,24 @@ public class TestLinkedList {
         assertEquals(5, myLinkedList.remove(2).value);
         assertEquals(4, myLinkedList.getTail().value);
     }
+
+
+    @Test
+    public void testReverse(){
+        LinkedList myLinkedList = new LinkedList(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+        myLinkedList.append(4);
+        myLinkedList.append(5);
+
+        myLinkedList.reverse();
+
+//        Testing reversing works
+        assertEquals(5, myLinkedList.getHead().value);
+        assertEquals(4, myLinkedList.get(1).value);
+        assertEquals(3, myLinkedList.get(2).value);
+        assertEquals(2, myLinkedList.get(3).value);
+        assertEquals(1, myLinkedList.getTail().value);
+
+    }
 }
